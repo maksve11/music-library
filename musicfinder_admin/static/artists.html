@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Music Finder</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="artists.js"></script>
+    <link rel="stylesheet" href="circle.css">
+    <link rel="stylesheet" href="musicfinder.css">
+
+	<!-- Bootstrap -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<h1>Music Finder  -  Artists   <a href="#" id ="nickShowed"></a></h1>
+		<form class="form-inline">
+			<div class="form-group">
+				<input align="left" id="artist_input" type="artist_input" class="form-control" placeholder="Artist"/>
+				<input align="left" id="country_input" type="country_input" class="form-control" placeholder="Country"/>
+				<input align="left" id="language_input" type="language_input" class="form-control" placeholder="Language"/>
+				<input align="left" id="genre_input" type="genre_input" class="form-control" placeholder="Genre"/>
+			</div>
+			<input align="left" id="search_button" type="button" value="Search!" class="btn btn-default" onclick="search()"/>
+		</form>
+
+		<hr />
+
+		<div class="col-md-4">
+		<table id="artists" align="left" border="1" cellpadding="1" cellspacing="1" height="128" width="204" class="table table-striped">
+			<tbody>
+
+			</tbody>
+		</table>
+		</div>
+
+		<div class="col-md-6">
+		<table id="songs" align="right" border="1" cellpadding="1" cellspacing="1" height="128" width="469" class="table table-striped">
+			<tbody>
+            <tr>
+            <th>Song</th><th>Add to playlist</th>
+</tr>
+			</tbody>
+		</table>
+		</div>
+
+		<p>&nbsp;</p>
+	</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="chooseModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add to playlist</h4>
+      </div>
+      <div class="modal-body">
+          <p id="song"></p>
+          <p id="artist"></p>
+<div class="dropdown" id="rows">
+    <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Choose playlist
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+      </ul>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+	<script src="Bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+
+</html> 

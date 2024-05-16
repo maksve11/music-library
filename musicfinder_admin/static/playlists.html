@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Music Finder</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="playlists.js"></script>
+	<!-- Bootstrap -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<h1>Music Finder  -  Playlists   <small id ="nickShowed"></small></h1>
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="searchLabel">Search playlist</label>
+				<input align="left" id="playlistInput" type="text" class="form-control"/>
+			</div>
+			<input align="left" id="search_button" type="button" value="Search!" class="btn btn-default" onclick="search()"/>
+			<input align="left" id="new_playlist_button" type="button" value="New Playlist" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"/>
+            <a href="#" id="artbutt" value="Artists" class="btn btn-warning col-md-offset-1" role="button" />
+				Artists
+			</a>
+        </form>
+
+		<hr />
+		<div class="col-md-4">
+		<table id="playlists" align="left" border="1" cellpadding="1" cellspacing="1" height="128" width="204" class="table table-striped">
+			<tbody>
+
+			</tbody>
+		</table>
+		</div>
+
+		<div class="col-md-6">
+		<table id="songsinpl" align="right" border="1" cellpadding="1" cellspacing="1" height="128" width="469" class="table table-striped">
+			<tbody>
+
+			</tbody>
+		</table>
+		</div>
+
+		<p>&nbsp;</p>
+	</div>
+
+	<!-- Modal bootstrap containing the form to add a new playlist -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="exampleModalLabel">New Playlist</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" id="newPlaylistName" placeholder="Title">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" onclick="handleCreatePlaylist()">Save Playlist</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="Bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+
+</html> 

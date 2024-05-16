@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Music Finder - User</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="ui.js"></script>
+	<!-- Bootstrap -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<h1>Music Finder</h1>
+		<form class="form-inline">
+			<div class="form-group">
+				<input align="left" id="nickInput" type="text" class="form-control" placeholder="Nickname"/>
+			</div>
+			<div class="form-group">
+				<input align="left" id="passInput" type="text" class="form-control" placeholder="Password"/>
+			</div>
+			<input align="left" id="login_button" type="button" value="Login!" class="btn btn-success" onclick="authenticate()"/>
+			<input align="left" id="new_user_button" type="button" value="New User" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"/>
+		</form>
+
+		<hr />
+
+		<p>&nbsp;</p>
+	</div>
+
+	<!-- Modal bootstrap containing the form to add a new user -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="exampleModalLabel">New User</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" id="newNickname" placeholder="Nickname">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="newPassword" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="newAge" placeholder="Age">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="newCountry" placeholder="Country">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="newGender" placeholder="Gender">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" onclick="handleCreateUser()">Save User</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="Bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+
+</html> 
